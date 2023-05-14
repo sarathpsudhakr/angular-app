@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: angular
-        image: ghcr.io/sarathpsudhakar/angular-app:sar-main
+        image: ghcr.io/sarathpsudhakr/angular-app:sar-main
         imagePullPolicy: "Always"
         ports:
         - containerPort: 80
