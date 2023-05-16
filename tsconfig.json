@@ -1,3 +1,5 @@
+// Configuration file used in TypeScript projects to specify compiler options and other settings
+//Angular json configuration file in Angular projects that defines various settings and options for the project's build, development, and deployment processes
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,

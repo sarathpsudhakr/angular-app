@@ -1,7 +1,10 @@
+# Pull NGINX stable image from Docker hub
 FROM nginx:stable
 
-COPY . /usr/local/app/
+# Create the folder and copy application files to the folder
+COPY . /usr/local/app/ 
 
+# Define the working directory
 WORKDIR /usr/local/app
 
 # Copy NGINX configuration file
