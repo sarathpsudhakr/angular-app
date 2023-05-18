@@ -8,7 +8,7 @@ COPY . /usr/local/app/
 WORKDIR /usr/local/app
 
 # Install vim editor, top, iftop
-RUN apt-get install vim procps iftop
+RUN apt-get update && apt-get install vim procps iftop
 
 # Copy NGINX configuration file
 COPY nginx.conf /etc/nginx/conf.d/default.conf
