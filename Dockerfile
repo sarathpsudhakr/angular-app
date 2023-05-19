@@ -23,7 +23,8 @@ COPY /dist/angular-app /usr/share/nginx/html
 RUN chown -R nginx:nginx /var/cache/nginx /var/run /var/log/nginx /usr/share/nginx/html
 
 # Set permission of NGNIX directories
-RUN chmod -R 700 /var/run /var/log/nginx /usr/share/nginx/html /var/cache/nginx
+RUN chmod -R 644 /var/run
+RUN chmod -R 700 /var/log/nginx /usr/share/nginx/html /var/cache/nginx
 
 # Switch to the nginx user
 USER nginx
