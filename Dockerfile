@@ -19,11 +19,13 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy Build files
 COPY /dist/angular-app /usr/share/nginx/html
 
+RUN touch /var/run/nginx.pid
+
 # Set the ownership of NGINX directories to the nginx user
-RUN chown -R nginx:nginx /var/cache/nginx /var/run /var/log/nginx /usr/share/nginx/html
+RUN chown -R nginx:nginx /var/cache/nginx /var/run/nginx.pid /var/log/nginx /usr/share/nginx/html
 
 # Set permission of NGNIX directories
-RUN chmod -R 644 /var/run
+RUN chmod -R 644 /var/run/nginx.pid
 RUN chmod -R 700 /var/log/nginx /usr/share/nginx/html /var/cache/nginx
 
 # Switch to the nginx user
