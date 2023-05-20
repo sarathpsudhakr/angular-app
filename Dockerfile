@@ -19,6 +19,7 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy Build files
 COPY /dist/angular-app /usr/share/nginx/html
 
+# Create nginx process ID file
 RUN touch /var/run/nginx.pid
 
 # Set the ownership of NGINX directories to the nginx user
